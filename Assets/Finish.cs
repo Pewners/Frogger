@@ -13,7 +13,10 @@ public class Finish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if player touches finish
-            //end game
+    
     }
+
+    //void ontriggerenter2d
+        //if player touches finish
+            //finish game
 }

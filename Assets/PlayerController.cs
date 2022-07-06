@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-	
+	//lives = 3
+	float minX = -3.46f;
+	float minY = -4.98f;
+	float maxX = 4.17f;
+	float maxY = 4.436f;
+
+
 	void Start()
 	{
 		//spawn player at start
@@ -13,18 +19,32 @@ public class PlayerController : MonoBehaviour
 	
 	void Update()
 	{
-		//if arrow key is pressed
-			//if Input.GetKeyDown(KeyCode.Left)
-				//move left
 
-			//if Input.GetKeyDown(KeyCode.Right)
-				//move right
+		if (Input.GetKeyDown(KeyCode.LeftArrow) && transform.position.x > minX)
+		{
+			Debug.Log("Left");
+			transform.Translate(Vector2.left);
+			//if player > -4.03, -0.0057
+				//dont move
+		}
 
-			//if Input.GetKeyDown(KeyCode.Up)
-				//move up
+		if (Input.GetKeyDown(KeyCode.RightArrow) && transform.position.x < maxX)
+		{
+			Debug.Log("Right");
+			transform.Translate(Vector2.right);
+		}
 
-			//if Input.GetKeyDown(KeyCode.Down)
-				//move down
+		if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxY)
+		{
+			Debug.Log("Up");
+			transform.Translate(Vector2.up);
+		}
+
+		if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minY)
+		{
+			Debug.Log("Down");
+			transform.Translate(Vector2.down);
+		}
 
 		
 	}
@@ -32,6 +52,7 @@ public class PlayerController : MonoBehaviour
 	//void OnTriggerEnter2D (Collider2D col)
 			//if player touches vehicle
 				//kill player
+				//lives = lives-1
 				//respawn at start
 
 			//if player touches finish
