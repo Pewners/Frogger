@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 	//lives = 3
-	float minX = -3.46f;
-	float minY = -4.98f;
-	float maxX = 4.17f;
-	float maxY = 4.436f;
+	public float minX = -3.46f;
+	public float minY = -4.98f;
+	public float maxX = 4.17f;
+	public float maxY = 4.436f;
 
 
 	void Start()
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.LeftArrow) && transform.position.x > minX)
 		{
-			Debug.Log("Left");
+			//Debug.Log("Left");
 			transform.Translate(Vector2.left);
 			//if player > -4.03, -0.0057
 				//dont move
@@ -30,19 +30,19 @@ public class PlayerController : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.RightArrow) && transform.position.x < maxX)
 		{
-			Debug.Log("Right");
+			//Debug.Log("Right");
 			transform.Translate(Vector2.right);
 		}
 
 		if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxY)
 		{
-			Debug.Log("Up");
+			//Debug.Log("Up");
 			transform.Translate(Vector2.up);
 		}
 
 		if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minY)
 		{
-			Debug.Log("Down");
+			//Debug.Log("Down");
 			transform.Translate(Vector2.down);
 		}
 
