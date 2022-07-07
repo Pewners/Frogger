@@ -22,8 +22,9 @@ public class Respawn : MonoBehaviour
     {
         if (col.tag == "End")
         {
-            Destroy(Player);
-            Instantiate(Player, new Vector2( 0, -4), Quaternion.identity);
+            //Destroy(Player);
+            //Instantiate(Player, new Vector2( 0, -4), Quaternion.identity);
+            transform.Translate(new Vector2 (0, -8));
         }
     }
 }
