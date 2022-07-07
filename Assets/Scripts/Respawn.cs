@@ -28,7 +28,7 @@ public class Respawn : MonoBehaviour
         if (col.tag == "Enemy")
         {
             //-1 life
-            transform.Translate(new Vector2(0, -8));
+            transform.position = (new Vector2(0, -4));
         }
     }
 }
