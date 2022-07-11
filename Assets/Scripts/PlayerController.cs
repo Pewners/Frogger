@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-	//lives = 3
 	public float minX = -3.46f;
 	public float minY = -4.98f;
 	public float maxX = 4.17f;
